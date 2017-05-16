@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for('static', filename='css/style.css')}}>
+    <title>Dojo Survey</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <form action="/result" method="post">
+        Your Name: <input type="text" name="name"><br>
+        <br>
+        Dojo Location:
+        <select name="locations">
+        <option value="seattle">Seattle</option>
+        <option value="sanjose">San Jose</option>
+        <option value="la">LA</option>
+        <option value="newyork">New York</option>
+      </select><br>
+      <br>
+        Favorite Language:
+        <select name="language">
+        <option value="python">Python</option>
+        <option value="mean">Mean</option>
+        <option value="ios">IOS</option>
+        <option value="csharp">C#/C++</option>
+      </select><br>
+      <br>
+        Comment (optional):<br>
+        <textarea name="comment" id="comment"></textarea>
+        <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+        <input type="submit" value="submit">
+      </form>
+
+    </div>
+  </body>
+</html>
