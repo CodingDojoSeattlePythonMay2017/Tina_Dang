@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {%load static%}
+    <link rel="stylesheet" href={%static 'style.css'%}>
+    <title>Display</title>
+  </head>
+  <body>
+    <p>This is the display</p>
+    <form class="" action="/ninjas/purple" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="purple">
+    </form>
+
+    <form class="" action="/ninjas/red" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="red">
+    </form>
+
+    <form class="" action="/ninjas/blue" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="blue">
+    </form>
+
+    <form class="" action="/ninjas/orange" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="orange">
+    </form>
+
+    <form class="" action="/ninjas/brown" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="brown">
+    </form>
+
+    <img src="{%static url%}" alt="">
+  </body>
+</html>
